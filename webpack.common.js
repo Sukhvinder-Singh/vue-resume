@@ -2,6 +2,7 @@ const PATH = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const { VueLoaderPlugin } = require('vue-loader');
 
 const JS_OUTPUT_DIR = "./dist/js";
 const CSS_OUTPUT_DIR = PATH.relative(JS_OUTPUT_DIR, "./dist/css");
@@ -26,6 +27,11 @@ module.exports = {
     target: ["web", "es5"],
     module: {
         rules: [
+            {
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                use: "vue-loader"
+            },
             {
                 test: /\.ejs$/,
                 exclude: /node_modules/,
@@ -68,6 +74,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new VueLoaderPlugin(),
         HTMLWebpackPluginInstance,
         new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin({
