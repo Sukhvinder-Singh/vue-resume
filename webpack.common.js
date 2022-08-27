@@ -6,7 +6,7 @@ module.exports = {
     },
     output: {
         path: PATH.resolve(__dirname, "dist/js"),
-        filename: "[name].js"
+        filename: "[name].min.js"
     },
     target: ["web", "es5"],
     module: {
