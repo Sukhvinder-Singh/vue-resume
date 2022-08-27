@@ -1,0 +1,12 @@
+@mixin responsive_from($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+} 
+
+@mixin responsive_to($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+} 
+

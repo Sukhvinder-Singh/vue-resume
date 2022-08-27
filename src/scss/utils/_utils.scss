@@ -1,0 +1,16 @@
+@for $i from 1 through 15 {
+    $padding: $i - 1;
+    
+    .pt-#{$padding} {
+        padding-top: $padding !important;
+    }
+    .pr-#{$padding} {
+        padding-right: $padding !important;
+    }
+    .pb-#{$padding} {
+        padding-bottom: $padding !important;
+    }
+    .pl-#{$padding} {
+        padding-left: $padding !important;
+    }
+}
