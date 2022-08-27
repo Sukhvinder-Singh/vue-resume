@@ -1,9 +1,17 @@
 <template>
-  <h1>{{ message }}</h1>
+  <div class="resume">
+    <div
+      class="resume__section"
+      v-for="(resumeSection, index) in resumeData"
+      :key="`${resumeSection.section}-${index}`"
+    >
+      <h1 class="resume__sectionHeading">{{ resumeSection.heading }}</h1>
+    </div>
+  </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  message: String,
+  resumeData: Array,
 });
 </script>
