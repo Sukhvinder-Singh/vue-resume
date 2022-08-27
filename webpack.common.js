@@ -58,7 +58,7 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/,
                 exclude: /node_modules/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', {
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', {
                     loader: "sass-loader",
                     options: {
                         sourceMap: true,
