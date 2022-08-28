@@ -7,9 +7,6 @@ Arial,
 Helvetica,
 sans-serif;
 
-$color-level-1: red;
-
-
 body {
     font-family: $body-font;
 }
@@ -43,7 +40,7 @@ h2 {
         left: 0;
         width: 8px;
         height: 100%;
-        background-color: $color-level-1;
+        background-color: $color-primary;
     }
 }
 
