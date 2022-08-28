@@ -1,23 +1,65 @@
 @for $i from 1 through 15 {
-    $padding: $i - 1;
+    $multiplier: $i - 1;
 
-    .p-#{$padding} {
-        padding: $padding !important;
+    // Padding utilities
+    .p-#{$multiplier} {
+        padding: $multiplier !important;
     }
 
-    .pt-#{$padding} {
-        padding-top: $padding !important;
+    .px-#{$multiplier} {
+        padding-left: $multiplier !important;
+        padding-right: $multiplier !important;
     }
 
-    .pr-#{$padding} {
-        padding-right: $padding !important;
+    .py-#{$multiplier} {
+        padding-top: $multiplier !important;
+        padding-bottom: $multiplier !important;
     }
 
-    .pb-#{$padding} {
-        padding-bottom: $padding !important;
+    .pt-#{$multiplier} {
+        padding-top: $multiplier !important;
     }
 
-    .pl-#{$padding} {
-        padding-left: $padding !important;
+    .pr-#{$multiplier} {
+        padding-right: $multiplier !important;
+    }
+
+    .pb-#{$multiplier} {
+        padding-bottom: $multiplier !important;
+    }
+
+    .pl-#{$multiplier} {
+        padding-left: $multiplier !important;
+    }
+
+    // Margin utilities
+    .m-#{$multiplier} {
+        margin: $multiplier !important;
+    }
+
+    .mx-#{$multiplier} {
+        margin-left: $multiplier !important;
+        margin-right: $multiplier !important;
+    }
+
+    .my-#{$multiplier} {
+        margin-top: $multiplier !important;
+        margin-bottom: $multiplier !important;
+    }
+
+    .mt-#{$multiplier} {
+        margin-top: $multiplier !important;
+    }
+
+    .mr-#{$multiplier} {
+        margin-right: $multiplier !important;
+    }
+
+    .mb-#{$multiplier} {
+        margin-bottom: $multiplier !important;
+    }
+
+    .ml-#{$multiplier} {
+        margin-left: $multiplier !important;
     }
 }

@@ -2,7 +2,7 @@
   <div class="work__section">
     <div class="work__details">
       <div>
-        <h3>Company name</h3>
+        <h3 class="mb-0">Company name</h3>
         <h4>Role in company</h4>
       </div>
       <ul class="work__progression">
