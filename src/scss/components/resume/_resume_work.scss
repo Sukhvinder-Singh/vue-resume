@@ -1,0 +1,22 @@
+.work {
+    &__details {
+        width: 100%;
+        max-width: calc(100% - 24px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        margin-bottom: 0.635em;
+    }
+
+    &__progression {
+        li {
+            margin-bottom: 0.25em;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

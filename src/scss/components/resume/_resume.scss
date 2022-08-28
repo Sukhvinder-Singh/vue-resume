@@ -14,7 +14,6 @@ $paper-height: 842px; // A4 paper height in px at 72dpi
     }
 
     &__col {
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -31,12 +30,25 @@ $paper-height: 842px; // A4 paper height in px at 72dpi
     }
 
     &__section {
-        &--header {
-            grid-column: 1/-1;
+        ul {
+            padding-left: 0.875em;
+            margin: 0;
         }
-    }
 
-    &__sectionHeading {
-        font-size: 1.5rem;
+        li {
+            position: relative;
+            margin-bottom: 0.625em;
+
+            &::before {
+                content: "\2022";
+                position: absolute;
+                top: 0;
+                left: -0.875em;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 }
