@@ -31,6 +31,8 @@ $paper-height: 842px; // A4 paper height in px at 72dpi
     }
 
     &__section {
+        width: 100%;
+        
         ul {
             padding-left: 0.875em;
             margin: 0;
@@ -51,5 +53,24 @@ $paper-height: 842px; // A4 paper height in px at 72dpi
                 margin-bottom: 0;
             }
         }
+    }
+
+    &__article {
+        width: 100%;
+        margin-bottom: 0.3em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    } 
+
+    &__articleHeading{
+        width: 100%;
+        max-width: calc(100% - 40px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
     }
 }
