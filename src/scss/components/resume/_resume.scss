@@ -1,0 +1,42 @@
+$paper-width: 695px; // A4 paper width in px at 72dpi
+$paper-height: 842px; // A4 paper height in px at 72dpi
+
+.resume {
+    width: 100%;
+    max-width: $paper-width;
+    margin-inline: auto;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
+    }
+
+    &__col {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+
+        &--left {
+            grid-column: 1/2;
+        }
+
+        &--right {
+            grid-column: -1/2;
+        }
+    }
+
+    &__section {
+        &--header {
+            grid-column: 1/-1;
+        }
+    }
+
+    &__sectionHeading {
+        font-size: 1.5rem;
+    }
+}

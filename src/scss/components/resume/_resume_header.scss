@@ -1,0 +1,20 @@
+.resume {
+
+    &__name,
+    &__role {
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
