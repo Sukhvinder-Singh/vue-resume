@@ -1,23 +1,25 @@
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    grid-column: 1/-1;
-    padding-top: 0.625em;
-    padding-bottom: 0.625em;
-    border-bottom: 1px solid $black; 
+.resume {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-column: 1/-1;
+        padding-top: 0.625em;
+        padding-bottom: 0.625em;
+        border-bottom: 1px solid $black;
 
-    &__role {
-        font-size: 1rem;
+        &__role {
+            font-size: 1rem;
+        }
     }
-}
 
-.links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
-    justify-content: space-between;
-    gap: 16px;
+    .links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
 }
