@@ -1,5 +1,5 @@
 <template>
-  <div class="work__section">
+  <article class="work resume__article">
     <div class="work__details">
       <div>
         <h3 class="mb-0">KPMG</h3>
@@ -47,5 +47,5 @@
         <strong>upskilled team members</strong>. [View certificate]
       </li>
     </ul>
-  </div>
+  </article>
 </template>
