@@ -3,63 +3,63 @@
 
     // Padding utilities
     .p-#{$multiplier} {
-        padding: $multiplier !important;
+        padding: $multiplier * 8px !important;
     }
 
     .px-#{$multiplier} {
-        padding-left: $multiplier !important;
-        padding-right: $multiplier !important;
+        padding-left: $multiplier * 8px !important;
+        padding-right: $multiplier * 8px !important;
     }
 
     .py-#{$multiplier} {
-        padding-top: $multiplier !important;
-        padding-bottom: $multiplier !important;
+        padding-top: $multiplier * 8px !important;
+        padding-bottom: $multiplier * 8px !important;
     }
 
     .pt-#{$multiplier} {
-        padding-top: $multiplier !important;
+        padding-top: $multiplier * 8px !important;
     }
 
     .pr-#{$multiplier} {
-        padding-right: $multiplier !important;
+        padding-right: $multiplier * 8px !important;
     }
 
     .pb-#{$multiplier} {
-        padding-bottom: $multiplier !important;
+        padding-bottom: $multiplier * 8px !important;
     }
 
     .pl-#{$multiplier} {
-        padding-left: $multiplier !important;
+        padding-left: $multiplier * 8px !important;
     }
 
     // Margin utilities
     .m-#{$multiplier} {
-        margin: $multiplier !important;
+        margin: $multiplier * 8px !important;
     }
 
     .mx-#{$multiplier} {
-        margin-left: $multiplier !important;
-        margin-right: $multiplier !important;
+        margin-left: $multiplier * 8px !important;
+        margin-right: $multiplier * 8px !important;
     }
 
     .my-#{$multiplier} {
-        margin-top: $multiplier !important;
-        margin-bottom: $multiplier !important;
+        margin-top: $multiplier * 8px !important;
+        margin-bottom: $multiplier * 8px !important;
     }
 
     .mt-#{$multiplier} {
-        margin-top: $multiplier !important;
+        margin-top: $multiplier * 8px !important;
     }
 
     .mr-#{$multiplier} {
-        margin-right: $multiplier !important;
+        margin-right: $multiplier * 8px !important;
     }
 
     .mb-#{$multiplier} {
-        margin-bottom: $multiplier !important;
+        margin-bottom: $multiplier * 8px !important;
     }
 
     .ml-#{$multiplier} {
-        margin-left: $multiplier !important;
+        margin-left: $multiplier * 8px !important;
     }
 }
