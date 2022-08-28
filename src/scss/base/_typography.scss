@@ -30,7 +30,7 @@ h2 {
     position: relative;
     font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.75em;
     padding-left: 16px;
 
     &::before {
@@ -48,6 +48,7 @@ h3 {
     font-size: 1.125rem;
     font-weight: 500;
     margin-bottom: 0.3em;
+    color: $color-secondary;
 }
 
 p,
@@ -56,6 +57,14 @@ li,
 a {
     font-size: 0.8125rem;
     line-height: 1.35;
+}
+
+a {
+    color: blue;
+
+    &:visited {
+        color: blue;
+    }
 }
 
 strong {
