@@ -13,13 +13,16 @@
         &__item {
             display: inline-block;
             margin: 0;
-            padding-left: 0.5625em;
+            padding-left: 0.625em;
+            font-weight: 500;
             font-size: 0.875rem;
 
             &::before {
+                top: 50%;
                 left: 0;
                 color: $color-primary;
-                transform: scale(1.5);
+                transform: translateY(-50%) scale(1.75);
+                line-height: 1;
             }
         }
     }
