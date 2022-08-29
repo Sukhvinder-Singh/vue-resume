@@ -23,9 +23,11 @@
         </section>
         <section class="resume__section">
           <h2>Certifications</h2>
+          <Certifications/>
         </section>
         <section class="resume__section">
           <h2>Achievements</h2>
+          <Achievement/>
         </section>
       </div>
     </div>
@@ -38,6 +40,8 @@ import Work from "./Work.vue";
 import Projects from "./Projects.vue";
 import Education from "./Education.vue";
 import Skills from "./Skills.vue";
+import Certifications from "./Certifications.vue";
+import Achievement from "./Achievement.vue";
 
 const props = defineProps({
   resumeData: Array,
