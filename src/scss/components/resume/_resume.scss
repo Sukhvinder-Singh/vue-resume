@@ -1,10 +1,14 @@
-$paper-width: 695px; // A4 paper width in px at 72dpi
-$paper-height: 842px; // A4 paper height in px at 72dpi
+$paper-width: 21cm; // A4 paper width in px at 72dpi
+$paper-height: 29cm; // A4 paper height in px at 72dpi
+$paper-margin: 0.5cm;
 
 .resume {
     width: 100%;
     max-width: $paper-width;
+    height: auto;
+    max-height: $paper-height;
     margin-inline: auto;
+    padding: $paper-margin; 
 
     &__grid {
         display: grid;
