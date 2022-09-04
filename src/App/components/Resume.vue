@@ -11,6 +11,10 @@
           <h2>Projects</h2>
           <Projects />
         </section>
+        <section class="resume__section" v-for="(i,idx) in leftColData">
+          <h2>{{resumeSectionInterface(i).getHeading()}}</h2>
+          <component :is="resumeSectionInterface(i).getSection()"></component>
+        </section>
       </div>
       <div class="resume__col resume__col--right">
         <section class="resume__section">
@@ -23,11 +27,11 @@
         </section>
         <section class="resume__section">
           <h2>Certifications</h2>
-          <Certifications/>
+          <Certifications />
         </section>
         <section class="resume__section">
           <h2>Achievements</h2>
-          <Achievement/>
+          <Achievement />
         </section>
       </div>
     </div>
@@ -42,8 +46,19 @@ import Education from "./Education.vue";
 import Skills from "./Skills.vue";
 import Certifications from "./Certifications.vue";
 import Achievement from "./Achievement.vue";
+import { RESUME_DATA } from "../composables/data";
+import {
+  getColumnSections,
+  getVisibleSections,
+  resumeSectionInterface,
+  sortSectionsByOrder,
+} from "../composables/resume-interface";
 
 const props = defineProps({
   resumeData: Array,
 });
+
+const leftColData = sortSectionsByOrder(
+  getVisibleSections(getColumnSections(RESUME_DATA, "left"))
+);
 </script>
