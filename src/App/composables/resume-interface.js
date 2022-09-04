@@ -2,15 +2,15 @@ import { getOrder, isVisible } from "./utils";
 
 /**
  * 
- * @typedef {{section: String, heading: String, column: String, order: Number, display: Boolean, content: Array}} resumeSection 
+ * @typedef {{section: String, heading: String, column: String, order: Number, display: Boolean, content: Array}} ResumeSectionObject 
  */
 
 /**
  * 
- * @param {resumeSection} resumeSectionObject 
+ * @param {ResumeSectionObject} resumeSectionObject 
  * @returns 
  */
-export const resumeSectionInterface = resumeSectionObject => {
+export const resumeSection = resumeSectionObject => {
 
     return {
         /**
@@ -53,34 +53,34 @@ export const resumeSectionInterface = resumeSectionObject => {
 
 /**
  * Get all sections that are visible
- * @param {Array<resumeSection>} data 
+ * @param {Array<ResumeSectionObject>} data 
  * @returns {Array} Visible sections array
  */
 export const getVisibleSections = data => {
     return data.filter(resumeSectionObject => {
-        return resumeSectionInterface(resumeSectionObject).isVisible() === true
+        return resumeSection(resumeSectionObject).isVisible() === true
     });
 }
 
 /**
  * Sort resume sections by thier order
- * @param {Array<resumeSection>} data 
+ * @param {Array<ResumeSectionObject>} data 
  */
 export const sortSectionsByOrder = data => {
     return data.sort((a, b) => {
-        const x = resumeSectionInterface(a).getOrder();
-        const y = resumeSectionInterface(b).getOrder();
+        const x = resumeSection(a).getOrder();
+        const y = resumeSection(b).getOrder();
         return x - y;
     });
 }
 
 /**
  * Get left or right column sections
- * @param {Array<resumeSection>} resumeData
+ * @param {Array<ResumeSectionObject>} resumeData
  * @param {String} column 
  */
 export const getColumnSections = (resumeData, column) => {
     return resumeData.filter(resumeSectionObject => {
-        return resumeSectionInterface(resumeSectionObject).getColumn() === column
+        return resumeSection(resumeSectionObject).getColumn() === column
     });
 }
