@@ -3,17 +3,12 @@
     <div class="resume__grid">
       <Header />
       <div class="resume__col resume__col--left">
-        <section class="resume__section">
-          <h2>Work Experience</h2>
-          <Work />
-        </section>
-        <section class="resume__section">
-          <h2>Projects</h2>
-          <Projects />
-        </section>
-        <section class="resume__section" v-for="(i,idx) in leftColData">
-          <h2>{{resumeSectionInterface(i).getHeading()}}</h2>
-          <component :is="resumeSectionInterface(i).getSection()"></component>
+        <section v-for="sectionData in leftColData" class="resume__section">
+          <h2>{{ resumeSection(sectionData).getHeading() }}</h2>
+          <component
+            :is="resumeSection(sectionData).getSection()"
+            :data="resumeSection(sectionData).getContent()"
+          ></component>
         </section>
       </div>
       <div class="resume__col resume__col--right">
@@ -38,19 +33,26 @@
   </div>
 </template>
 
+<script>
+import WorkExperience from "./Work.vue";
+export default {
+  components: {
+    WorkExperience,
+  },
+};
+</script>
+
 <script setup>
 import Header from "./Header.vue";
-import Work from "./Work.vue";
-import Projects from "./Projects.vue";
 import Education from "./Education.vue";
 import Skills from "./Skills.vue";
 import Certifications from "./Certifications.vue";
 import Achievement from "./Achievement.vue";
 import { RESUME_DATA } from "../composables/data";
 import {
+  resumeSection,
   getColumnSections,
   getVisibleSections,
-  resumeSectionInterface,
   sortSectionsByOrder,
 } from "../composables/resume-interface";
 
