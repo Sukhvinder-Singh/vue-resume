@@ -1,3 +1,5 @@
+import { getOrder, isVisible } from "./utils";
+
 /**
  * 
  * @typedef {{section: String, heading: String, column: String, order: Number, display: Boolean, content: Array}} resumeSection 
@@ -33,13 +35,13 @@ export const resumeSectionInterface = resumeSectionObject => {
          * Returns order of appearance
          * @returns {Number}
          */
-        getOrder: () => resumeSectionObject.order,
+        getOrder: () => getOrder(resumeSectionObject),
 
         /**
          * Returns visibility of the section
          * @returns {Boolean}
          */
-        isVisible: () => resumeSectionObject.display,
+        isVisible: () => isVisible(resumeSectionObject),
 
         /**
          * Returns contents in the section
